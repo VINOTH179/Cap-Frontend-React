@@ -1,0 +1,398 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  color: #000000;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: rgba(0, 123, 255, 0.8);
+  padding: 20px;
+  text-align:center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Login container */
+.login-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-container input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-container .error-message {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+/* Signup container */
+.signup-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.signup-container input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #218838;
+}
+
+/* Movie selection */
+.movie-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.movie {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.movie:hover {
+  transform: translateY(-10px) rotateX(10deg);
+}
+
+.movie-poster {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Screen selection */
+.screen-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.screen {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.screen:hover {
+  transform: translateY(-10px) rotateX(10deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.screen.selected {
+  border: 2px solid #007bff;
+}
+
+.screen-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.screen-time {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #555;
+}
+
+.screen-movie {
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.screen-seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat.selected {
+  background-color: #007bff;
+}
+
+.seat.unavailable {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.seat-number {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Booking summary */
+.booking-summary {
+  margin-top: 40px;
+}
+
+.selected-screen {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selected-screen h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.selected-screen p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.payment {
+  margin-top: 20px;
+}
+
+.payment p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.payment button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment button:hover {
+  background-color: #218838;
+}
+
+/* Ticket print */
+.ticket {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #080808;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.ticket h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.ticket p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.ticket .ticket-details {
+  margin-bottom: 20px;
+  
+}
+
+.ticket .ticket-details h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.ticket .ticket-details p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+  text-decoration-color: #000000;
+}
+
+.ticket .ticket-seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ticket .seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #090909;
+}
+
+.ticket .seat-number {
+  font-size: 14px;
+}
+
+.ticket .total-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+.ticket .total-amount span {
+  color: #28a745;
+}
+.ticket .button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ticket .button-container button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #181717;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ticket .button-container button:hover {
+  background-color: #218838;
+}
+.ticket-print {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.ticket-print h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ticket-print div {
+  margin-bottom: 5px;
+}
+
+.ticket-print strong {
+  font-weight: bold;
+}
+
+.ticket-print button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ticket-print button:hover {
+  background-color: #0056b3;
+}
