@@ -16,7 +16,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/register', { name, email, password });
+            const response = await axios.post('https://cap-backend-mongodb.onrender.com/register', { name, email, password });
             setMessage("Registration successful! You can now log in.");
             console.log(response.data);
         } catch (error) {
