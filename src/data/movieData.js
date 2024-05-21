@@ -37,6 +37,12 @@ export const MOVIES = [
     },
   ];
   
+  export const THEATERS = [
+    { id: 1, name: "Mayajaal Cinemas" },
+    { id: 2, name: "PVR Cinemas (V R Chennai Mall)" },
+    { id: 3, name: "Ags Cinemas (Vivira Mall)" },
+  ];
+
   // Sample screen data
   export const SCREENS = [
     {

@@ -1,7 +1,11 @@
+/* Background image for the entire application */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/backgroun…-the-ultimate-movie-experience-image_13524747.png');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   color: #000000;
   text-align: center;
@@ -17,7 +21,7 @@ body {
 .header {
   background-color: rgba(0, 123, 255, 0.8);
   padding: 20px;
-  text-align:center;
+  text-align: center;
 }
 
 .header h1 {
@@ -361,38 +365,18 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.ticket .button-container button:hover {
-  background-color: #218838;
-}
-.ticket-print {
-  font-family: Arial, sans-serif;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
-
-.ticket-print h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.ticket-print div {
-  margin-bottom: 5px;
-}
-
-.ticket-print strong {
-  font-weight: bold;
-}
-
-.ticket-print button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+.ticket .button-container
+{
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #181717;
+  background-color: #28a745;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.ticket-print button:hover {
-  background-color: #0056b3;
+.ticket .button-container button:hover {
+  background-color: #218838;
 }
