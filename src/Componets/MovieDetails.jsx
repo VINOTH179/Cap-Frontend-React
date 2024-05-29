@@ -24,6 +24,12 @@ import {
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import { makeStyles } from '@mui/styles'; // Import makeStyles
+
+// Define styles using makeStyles
+const useStyles = makeStyles((theme) => ({
+  // Define your styles here, if needed
+}));
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -35,6 +41,7 @@ export default function MovieDetails() {
   const [showTrailer, setShowTrailer] = useState(false);
   const [seatError, setSeatError] = useState(false); 
 
+  // Apply useStyles hook to access theme
   const classes = useStyles();
 
   const handleTheaterSelect = (theaterId) => {
@@ -102,10 +109,10 @@ export default function MovieDetails() {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
-          <Box position="relative">
+          <Box className={classes.imageContainer}>
             <img src={selectedMovie.images} alt={selectedMovie.title} style={{ width: '100%', borderRadius: '5px' }} />
-            <IconButton aria-label="play" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} onClick={handlePlayTrailer}>
-              <PlayCircleOutlineIcon style={{ fontSize: 64 }} />
+            <IconButton aria-label="play" className={classes.playButton} onClick={handlePlayTrailer}>
+              <PlayCircleOutlineIcon />
             </IconButton>
           </Box>
           {showTrailer && (
@@ -159,6 +166,7 @@ export default function MovieDetails() {
                     variant={selectedSeats.includes(selectedScreen.id * 100 + seatIndex) ? 'contained' : 'outlined'}
                     color="primary"
                     onClick={() => handleSeatSelect(selectedScreen.id, seatIndex)}
+                    className={classes.seatButton}
                   >
                     {seatIndex + 1}
                   </Button>
@@ -170,7 +178,7 @@ export default function MovieDetails() {
             <Typography variant="h6">Total Amount: ₹{calculateTotalAmount()}</Typography>
             <Button onClick={handleBooking} variant="contained" color="primary">Pay Now</Button>
             {seatError && (
-              <Typography variant="body2" color="error" style={{ marginTop: 10 }}>Please select your seats before proceeding to payment.</Typography>
+              <Typography variant="body2" color="error" className={classes.seatError}>Please select your seats before proceeding to payment.</Typography>
             )}
           </>
         )}
@@ -218,4 +226,3 @@ export default function MovieDetails() {
     </Container>
   );
 }
-
