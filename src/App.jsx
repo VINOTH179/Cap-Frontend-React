@@ -1,20 +1,20 @@
 import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Signup from './Componets/Signup'; // Corrected import statement
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MovieTicketsBooking from './Componets/MovieTicketsBooking'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MovieTicketsBooking from './Componets/MovieTicketsBooking';
 import Login from './Componets/Login';
+import Signup from './Componets/Signup';
+import MovieDetails from './Componets/MovieDetails'; // Import the MovieDetails component
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path='/register' element={<Signup />} />
-        <Route path='/' element={<Login />} />
-        <Route path="/MovieTicketsBooking" element={<MovieTicketsBooking />}></Route>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Signup />} />
+        <Route path="/movie-details/:movieId" element={<MovieDetails />} /> {/* Add this route */}
+        <Route path="/MovieTicketsBooking" element={<MovieTicketsBooking />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
